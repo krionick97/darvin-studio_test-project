@@ -1,0 +1,38 @@
+{
+  "name": "project_test",
+  "version": "1.0.0",
+  "description": "test work for Darvin Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vlad Kuznetsov",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "github:gulpjs/gulp",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-w3c-html-validator": "^1.4.4",
+    "node-sass": "^4.12.0"
+  },
+  "browserslist": [
+    "last 10 versions",
+    "cover 99.5%"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krionick97/darvin-studio_test-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krionick97/darvin-studio_test-project/issues"
+  },
+  "homepage": "https://github.com/krionick97/darvin-studio_test-project#readme"
+}
