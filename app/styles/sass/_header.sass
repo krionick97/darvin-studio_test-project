@@ -1,0 +1,100 @@
+.header
+  &__container
+    &-head
+      display: flex
+      justify-content: space-between
+  &__logo img
+    width: 100%
+  &__link
+    display: flex
+    text-decoration-line: none
+    &-icon
+      position: relative
+      float: left
+      margin-right: 2.6rem
+      img
+        width: 100%
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        height: 75%
+        width: 0.1rem
+        background-color: rgba($color-black, 0.3)
+        top: 0
+        right: -1.3rem
+    &-hours
+      +openSans_reg
+      font-size: 1.5rem
+      color: rgba($color-black, 0.7)
+      margin: 0 0 0.7rem
+    &-tel
+      +openSans_bold
+      font-size: 1.6rem
+      color: $color-black
+    &:hover
+      cursor: pointer
+    &:active
+      .header__link-tel, .header__link-hours
+        color: red
+  
+  &__button
+    &-callback
+      margin-right: 1rem
+    &-request
+      margin-left: 1rem
+
+  &__block
+    &-heading, &-navigation
+      padding: 2.2rem 0 2.3rem
+    &-navigation
+      background-color: $color-dark-bg
+
+@media (max-width: 990px)
+  .header
+    &__container
+      width: 95%
+
+@media (max-width: 840px)
+  .header
+    &__logo
+      max-width: 15rem
+    &__button
+      font-size: 1.2rem
+
+@media (max-width: 750px)
+  .header
+    &__link
+      &-icon
+        width: 1.6rem
+        margin-right: 2.2rem
+        &:before
+          right: -1rem
+      &-hours, &-tel
+        font-size: 1.4rem
+    &__button
+      &-callback
+        margin-right: 0.3rem
+      &-request
+        margin-left: 0.3rem
+    &__desktopMenu
+      &-link
+        font-size: 1.2rem
+
+@media (max-width: 650px)
+  // не забыть сделать мобильное меню -------- !!!!!!!!!
+  .header
+    &__container
+      &-head
+        flex-direction: column
+        // justify-content: center
+    &__button
+      width: 100%
+      font-size: 1.5rem
+      &-callback
+        margin: 0 0 1rem
+      &-request
+        margin: 0
+    &__contact
+      display: none
+

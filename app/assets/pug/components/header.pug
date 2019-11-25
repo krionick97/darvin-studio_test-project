@@ -1,1 +1,19 @@
-div header
+header.header
+  div.header__block-heading
+    div.container.header__container.header__container-head
+      div.header__logo
+        img(src="img/logo.png", alt="Logo")
+      div.header__contact
+        a(href="tel:+70000000000").header__link
+          div.header__link-icon
+            img(src="img/phone-icone.png", alt="Phone")
+          div.header__link-text
+            p.header__link-hours С 9:00 до 18:00
+            p.header__link-tel +7 (000) 000-00-00
+      div.header__buttons
+        button.button.header__button.header__button-callback Перезвоните мне
+        button.button.header__button.header__button-request Оставьте заявку
+
+  div.header__block-navigation
+    div.container.header__container
+      include desktopMenu

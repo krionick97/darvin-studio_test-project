@@ -5,79 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="styles/reset.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="styles/style.css"/>
     <script src="https://kit.fontawesome.com/61d2e0d67e.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>Veniam</title>
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-3 header__button">
-            <button class="btn btn-light button header__button-menu"><i class="fas fa-bars"></i></button>
+      <div class="header__block-heading">
+        <div class="container header__container header__container-head">
+          <div class="header__logo"><img src="img/logo.png" alt="Logo"/></div>
+          <div class="header__contact"><a class="header__link" href="tel:+70000000000">
+              <div class="header__link-icon"><img src="img/phone-icone.png" alt="Phone"/></div>
+              <div class="header__link-text">
+                <p class="header__link-hours">С 9:00 до 18:00</p>
+                <p class="header__link-tel">+7 (000) 000-00-00</p>
+              </div></a></div>
+          <div class="header__buttons">
+            <button class="button header__button header__button-callback">Перезвоните мне</button>
+            <button class="button header__button header__button-request">Оставьте заявку</button>
           </div>
-          <div class="col">
-            <p class="header__logo">Company logo</p>
-          </div>
-          <div class="col d-flex flex-row-reverse">
-            <div class="dropdown header__dropdown">
-              <button class="btn btn-light btn-secondary dropdown-toggle button header__dropdown-button" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</button>
-              <div class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item header__dropdown-item" href="#">English</a><a class="dropdown-item header__dropdown-item" href="#">Russian</a></div>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="header__block-navigation">
+        <div class="container header__container">
+          <nav class="menu header__desktopMenu">
+            <ul class="menu-list header__desktopMenu-list">
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">О компании</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Каталог<i class="arrow arrow-down"></i></a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Доставка и оплата</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Отзывы</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Новости</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Статьи</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Фотогалерея</a></li>
+              <li class="menu-item header__desktopMenu-item"><a class="menu-link header__desktopMenu-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
-    <section class="section">
-      <div class="container-fluid">
-        <div class="row section__row1">
-          <div class="col-3 section__menu">
-            <ul class="section__nav">
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Very very Long Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Very very Long Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Very very Long Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Very very Long Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Very very Long Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-                          <li class="section__nav-item"><a class="section__nav-link" href="#">Link for display</a></li>
-            </ul>
-          </div>
-          <div class="section__leftBlock"></div>
-          <div class="col section__centerBlock"></div>
-          <div class="section__rightBlock"></div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col footer__text">
-            <p class="footer__copyright">© Copyright 2017</p>
-          </div>
-          <div class="col d-flex flex-row-reverse">
-            <div class="footer__buttons">
-              <button class="btn btn-light button footer__button footer__button-save"><i class="far fa-save"></i> Save</button>
-              <button class="btn btn-outline-light button footer__button footer__button-back"><i class="fas fa-reply"></i> Back</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div>--------------------------------------</div>
+    <div>Section</div>
+    <div>--------------------------------------</div>
+    <div class="openSans-light">Open Sans Light</div>
+    <div class="openSans-reg">Open Sans Regular</div>
+    <div class="openSans-semiBold">Open Sans Semi Bold</div>
+    <div class="openSans-Bold">Open Sans Bold</div>
+    <div class="roboto-bold">Roboto Bold</div>
+    <div class="rubik-reg">Rubik Regular</div>
+    <div>--------------------------------------</div>
+    <div>footer</div>
     <script src="js/main.js"></script>
   </body>
 </html>

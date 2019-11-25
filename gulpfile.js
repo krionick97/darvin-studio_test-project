@@ -78,6 +78,15 @@ gulp.task('fonts', function() {
         }));
 });
 
+/* Image task */
+gulp.task('img', function() {
+  return gulp.src('app/img/*.*')
+        .pipe(gulp.dest('public/img/'))
+        .pipe(browserSync.reload({
+          stream: true
+        }));
+});
+
 /* JavaScript task */
 gulp.task('script', function() {
   return gulp.src('app/js/*.js')
@@ -89,13 +98,13 @@ gulp.task('script', function() {
 });
 
 /* JSON task */
-gulp.task('json', function() {
-  return gulp.src('app/data/*.json')
-        .pipe(gulp.dest('public/data/'))
-        .pipe(browserSync.reload({
-          stream: true
-        }));
-});
+// gulp.task('json', function() {
+//   return gulp.src('app/data/*.json')
+//         .pipe(gulp.dest('public/data/'))
+//         .pipe(browserSync.reload({
+//           stream: true
+//         }));
+// });
 
 /* All tasks monitoring */
 gulp.task('watch', function() {
@@ -104,11 +113,11 @@ gulp.task('watch', function() {
   gulp.watch('app/styles/sass/*.sass', gulp.series('sass'));
   gulp.watch('app/js/*.js', gulp.series('script'));
   gulp.watch('public/*.html', gulp.series('HTMLValidator'));
-  gulp.watch('app/data/*.json', gulp.series('json'));
+  // gulp.watch('app/data/*.json', gulp.series('json'));
 });
 
 /* Default task */
 gulp.task('default', gulp.series(
-  gulp.parallel('pug', 'fonts', 'sass', 'css', 'script', 'json'),
+  gulp.parallel('pug', 'fonts', 'sass', 'img', 'css', 'script'),
   gulp.parallel('watch', 'serve', 'HTMLValidator'),
 ));
