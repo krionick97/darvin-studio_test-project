@@ -5,11 +5,63 @@
       height: 55rem !important
       background-image: url('../img/slider-bg-img.jpg')
       background-size: cover
+      color: $color-white
+      &-title
+        +openSans_reg
+        font-size: 5rem
+        margin-bottom: 2rem
+      &-subtitle
+        +openSans_reg
+        font-size: 1.7rem
+      &-text
+        margin-top: 30rem
 
+  &__pageCounter
+    position: absolute
+    z-index: 2
+    bottom: 10rem
+    left: 42rem
+    color: $color-white
+    +openSans_reg
+    font-size: 2.5rem
+  &__pageInfo
+    +openSans_bold
 
-.slick-arrow
-  position: absolute
-  bottom: 10rem
-  z-index: 2
+.slick
+  &-arrow
+    position: absolute
+    bottom: 7rem
+    left: 28.5em
+    z-index: 2
+    display: block
+    width: 4.6rem
+    height: 4.6rem
+    border-radius: 2.3rem
+    background-color: $color-btn
+    &_next
+      transform: translateX(6rem)
+    &:hover
+      cursor: pointer
+    &:active
+      box-shadow: inset 0.1rem 0.1rem 1rem rgba($color-black, 0.4)
 
+  &_arr
+    border: solid $color-white
+    border-width: 0 0.3rem 0.3rem 0
+    display: inline-block
+    padding: 0.7rem
+    margin-top: 1.4rem
+    border-radius: 0.3rem
+    &-left
+      transform: rotate(135deg)
+      margin-left: 1.6rem
+    &-right
+      margin-left: 1.1rem
+      transform: rotate(-45deg)
+  &-disabled
+    background-color: $color-white
+    i
+      border-color: $color-btn
+    &:active
+      box-shadow: none
 
