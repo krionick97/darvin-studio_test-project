@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="styles/reset.css"/>
     <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"/>
     <script src="https://kit.fontawesome.com/61d2e0d67e.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Veniam</title>
   </head>
   <body>
@@ -16,8 +17,9 @@
         <div class="container header__container header__container-head">
           <div class="header__head">
             <div class="header__logo"><img src="img/logo.png" alt="Logo"/></div>
-            <input class="header__burger-checkbox" type="checkbox" id="burger-checkbox"/>
-            <label class="header__label" for="burger-checkbox"><span class="header__burger"><span class="header__burger-bars"><span class="header__burger-bar header__burger-bar1"></span><span class="header__burger-bar header__burger-bar2"></span><span class="header__burger-bar header__burger-bar3"></span></span></span></label>
+            <div class="header__burger">
+              <div class="header__burger-bars"><span class="header__burger-bar header__burger-bar1"></span><span class="header__burger-bar header__burger-bar2"></span><span class="header__burger-bar header__burger-bar3"></span></div>
+            </div>
           </div>
           <div class="header__contact"><a class="header__link" href="tel:+70000000000">
               <div class="header__link-icon"><img src="img/phone-icone.png" alt="Phone"/></div>
@@ -47,6 +49,30 @@
           </nav>
         </div>
       </div>
+      <!-- Slick Slider-->
+      <div class="header__slider">
+        <!-- Slider Item-->
+        <div class="header__slider_item">
+          <div class="header__slider_item-block">
+            <h1 class="header__slider_item-title">Найдите новую одежду</h1>
+            <h1 class="header__slider_item-subtitle">Обновите ваш гардероб к новому сезону!</h1>
+          </div>
+        </div>
+        <!-- Slider Item-->
+        <div class="header__slider_item">
+          <div class="header__slider_item-block">
+            <h1 class="header__slider_item-title">Найдите новую одежду</h1>
+            <h1 class="header__slider_item-subtitle">Обновите ваш гардероб к новому сезону!</h1>
+          </div>
+        </div>
+        <!-- Slider Item-->
+        <div class="header__slider_item">
+          <div class="header__slider_item-block">
+            <h1 class="header__slider_item-title">Найдите новую одежду</h1>
+            <h1 class="header__slider_item-subtitle">Обновите ваш гардероб к новому сезону!</h1>
+          </div>
+        </div>
+      </div>
     </header>
     <div>--------------------------------------</div>
     <div>Section</div>
@@ -59,6 +85,9 @@
     <div class="rubik-reg">Rubik Regular</div>
     <div>--------------------------------------</div>
     <div>footer</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
