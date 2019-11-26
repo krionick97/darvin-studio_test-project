@@ -1,4 +1,6 @@
 .header
+  /* for pageCounter */
+  position: relative
   &__slider
     position: relative
     &_item
@@ -19,8 +21,9 @@
   &__pageCounter
     position: absolute
     z-index: 2
-    bottom: 10rem
-    left: 42rem
+    bottom: 9%
+    left: 50%
+    transform: translateX(-33rem)
     color: $color-white
     +openSans_reg
     font-size: 2.5rem
@@ -30,8 +33,9 @@
 .slick
   &-arrow
     position: absolute
-    bottom: 7rem
-    left: 28.5em
+    bottom: 10%
+    left: 50%
+    transform: translateX(-47rem)
     z-index: 2
     display: block
     width: 4.6rem
@@ -39,7 +43,7 @@
     border-radius: 2.3rem
     background-color: $color-btn
     &_next
-      transform: translateX(6rem)
+      transform: translateX(-41rem)
     &:hover
       cursor: pointer
     &:active
@@ -64,4 +68,45 @@
       border-color: $color-btn
     &:active
       box-shadow: none
+
+@media (max-width: 980px)
+  .header
+    &__container
+      max-width: 90%
+    &__pageCounter
+      transform: translateX(0.5rem)
+      bottom: 5%
+    &__slider
+      &_item
+        height: 36rem !important
+        &-text
+          margin-top: 12rem
+          text-align: center
+
+  .slick
+    &-arrow
+      bottom: 20%
+      transform: translateX(-3rem)
+      &_next
+        transform: translateX(3rem)
+
+@media (max-width: 650px)
+  .header
+    &__slider
+      &_item
+        height: 30rem !important
+        &-text
+          margin-top: 9rem
+        &-title
+          font-size: 3.6rem
+          margin-bottom: 1.6rem
+
+@media (max-width: 455px)
+  .header
+    &__slider
+      display: none !important
+    &__pageCounter
+      display: none !important
+
+
 
