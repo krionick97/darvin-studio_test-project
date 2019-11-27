@@ -1,10 +1,19 @@
-div --------------------------------------
-div Section
-div --------------------------------------
-div.openSans-light Open Sans Light
-div.openSans-reg Open Sans Regular
-div.openSans-semiBold Open Sans Semi Bold
-div.openSans-Bold Open Sans Bold
-div.roboto-bold Roboto Bold
-div.rubik-reg Rubik Regular
-div --------------------------------------
+section.description
+  include descriptionTypes
+  include descriptionText
+
+section.salesHits
+  div.container.salesHits__container
+    h2.salesHits__title Хиты продаж
+  div.salesHits__slider
+    // Slider Item
+    div.salesHits__slider_item
+      div.salesHits__slider_item-block
+        div.salesHits__slider_item-card
+          div.salesHits__slider_item-button
+            input(type="checkbox")#cart-checkbox-1.salesHits__slider_item-checkbox
+            label(for="cart-checkbox-1")#cart-label-1.salesHits__slider_item-label
+              span.salesHits__slider_item-cart.salesHits__slider_item-add
+              span.salesHits__slider_item-cart.salesHits__slider_item-added
+          div.salesHits__slider_item-image
+          

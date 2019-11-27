@@ -33,17 +33,13 @@
 .slick
   &-arrow
     position: absolute
-    bottom: 10%
     left: 50%
-    transform: translateX(-47rem)
     z-index: 2
     display: block
     width: 4.6rem
     height: 4.6rem
     border-radius: 2.3rem
     background-color: $color-btn
-    &_next
-      transform: translateX(-41rem)
     &:hover
       cursor: pointer
     &:active
@@ -68,6 +64,15 @@
       border-color: $color-btn
     &:active
       box-shadow: none
+
+.header
+  &__slick-arrow
+    bottom: 10%
+    transform: translateX(-47rem)
+    &_next
+      transform: translateX(-41rem)
+
+
 
 @media (max-width: 980px)
   .header

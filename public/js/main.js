@@ -26,8 +26,8 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
-    prevArrow: '<div class="slick-arrow slick-arrow_prev"><i class="slick_arr slick_arr-left"></i></div>',
-    nextArrow: '<div class="slick-arrow slick-arrow_next"><i class="slick_arr slick_arr-right"></i></div>',
+    prevArrow: '<div class="slick-arrow slick-arrow_prev header__slick-arrow header__slick-arrow_prev"><i class="slick_arr slick_arr-left"></i></div>',
+    nextArrow: '<div class="slick-arrow slick-arrow_next header__slick-arrow header__slick-arrow_next"><i class="slick_arr slick_arr-right"></i></div>',
   });
 
 });
