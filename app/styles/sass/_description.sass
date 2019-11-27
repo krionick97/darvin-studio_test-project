@@ -61,3 +61,18 @@
       align-self: flex-end
       img
         width: 100%
+
+
+@media (max-width: 990px)
+  .description
+    &__types
+      max-width: 60%
+      margin: 0 auto
+      flex-wrap: wrap
+      justify-content: center
+      &-link
+        &:not(:first-child), &:not(:last-child),
+          margin-left: 2rem
+          margin-right: 2rem
+        &:not(:last-child)
+          margin-bottom: 2rem

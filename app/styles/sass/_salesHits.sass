@@ -1,17 +1,44 @@
 .salesHits
   padding: 7.1rem 0 8.3rem
   background-color: $color-type
+  &__container
+    max-width: 170rem
+    margin: 0 auto
+    position: relative
+    &:before, &:after
+      position: absolute
+      display: block
+      content: ''
+      height: 100%
+      pointer-events: none
+      z-index: 2
+      top: 0
+    &:before
+      left: 0
+      width: 20%
+      background-image: linear-gradient(90deg, rgba($color-type, 1), rgba($color-type, 0))
+    &:after
+      right: 0
+      width: 20%
+      background-image: linear-gradient(-90deg, rgba($color-type, 1), rgba($color-type, 0))
+
   &__title
     +openSans_reg
     font-size: 3.5rem
     margin-bottom: 4rem
   &__slider
+    /* for dots */
+    position: relative
     &_item
       &-checkbox
         visibility: hidden
         float: left
+      &:focus
+        outline: none
       &-card
-        display: block
+        margin: 0 auto
+        display: flex
+        flex-direction: column
         width: 26.7rem
         height: 34.3rem
         background-color: $color-white
@@ -19,9 +46,40 @@
         border-radius: 0.5rem
         padding: 1.7rem 1.6rem 2rem 2.2rem
         position: relative
+      &-border
+        position: absolute
+        display: block
+        left: 0
+        bottom: 11rem
+        width: 100%
+        height: 0.1rem
+        background-color: #e4e8eb
       &-button
         position: absolute
         right: 1.6rem
+      &-title
+        +openSans_reg
+        font-size: 1.4rem
+        color: $color-text-blue
+        max-width: 23rem
+        line-height: 1.2
+      &-price
+        position: absolute
+        bottom: 2rem
+        +openSans_bold
+        font-size: 1.7rem
+        color: $color-text-gray
+      &-image
+        align-self: center
+        width: 20rem
+        height: 25rem
+        margin-top: 0.8rem
+        margin-right: 2.5rem
+        margin-bottom: 0.8rem
+        &:hover
+          cursor: pointer
+      &-img
+        width: 100%
       &-cart
         width: 4.6rem
         height: 4.6rem
@@ -29,8 +87,6 @@
         background-repeat: no-repeat
         &:hover
           cursor: pointer
-        &:focus
-          outline: none
       &-add
         display: block
         background-color: $color-btn
@@ -47,9 +103,63 @@
         background-position: 50% 50%
         &:active
           box-shadow: inset 0 0 0.2rem rgba($color-black, 0.6)
+      &-hit:before, &-stock:after
+          position: absolute
+          display: block
+          left: 0
+          +openSans_reg
+          font-size: 1.2rem
+          background-color: $color-black
+          color: $color-white
+          padding: 0.8rem 0.8rem 0.6rem
+      &-hit:before
+        // top: 2rem
+        content: 'ХИТ ПРОДАЖ'
+      &-stock:after
+        top: 5rem
+        content: 'АКЦИЯ'
+
+  &__slick-arrow
+    top: -21%
+    transform: translateX(37rem)
+    &_next
+      transform: translateX(43rem)
+
+  &__slide-dots > li > button
+    display: none
+  &__slide-dots
+    position: absolute
+    left: 50%
+    bottom: -14%
+    transform: translateX(-50%)
+    li
+      display: block
+      width: 1.2rem
+      height: 1.2rem
+      border-radius: 0.6rem
+      background-color: #88a0ab
+      float: left
+      &:not(:first-child), &:not(:last-child)
+        margin: 0 0.5rem
+    li.slick-active
+      background-color: #30454f
+
 
 .salesHits__slider_item-checkbox:checked + .salesHits__slider_item-label > .salesHits__slider_item-add
   display: none
 .salesHits__slider_item-checkbox:checked + .salesHits__slider_item-label > .salesHits__slider_item-added
   display: block
 
+@media (max-width: 1288px)
+  .salesHits
+    padding: 5.5rem 0 9rem
+    &__container
+      &:before, &:after
+        display: none
+
+@media (max-width: 980px)
+  .salesHits
+    &__title
+      text-align: center
+    &__slick-arrow
+      display: none

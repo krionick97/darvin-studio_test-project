@@ -29,5 +29,49 @@ $(document).ready(function() {
     prevArrow: '<div class="slick-arrow slick-arrow_prev header__slick-arrow header__slick-arrow_prev"><i class="slick_arr slick_arr-left"></i></div>',
     nextArrow: '<div class="slick-arrow slick-arrow_next header__slick-arrow header__slick-arrow_next"><i class="slick_arr slick_arr-right"></i></div>',
   });
+  
+  /* Sales Hits Slider */
+  $('.salesHits__slider').slick({
+    infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: false,
+    prevArrow: '<div class="slick-arrow slick-arrow_prev salesHits__slick-arrow salesHits__slick-arrow_prev"><i class="slick_arr slick_arr-left"></i></div>',
+    nextArrow: '<div class="slick-arrow slick-arrow_next salesHits__slick-arrow salesHits__slick-arrow_next"><i class="slick_arr slick_arr-right"></i></div>',
+    responsive: [
+      {
+        breakpoint: 1640,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 1290,
+        settings: {
+          slidesToShow: 3,
+          dots: true,
+          dotsClass: 'salesHits__slide-dots',
+        }
+      },
+      {
+        breakpoint: 982,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          dotsClass: 'salesHits__slide-dots',
+        }
+      },
+      {
+        breakpoint: 662,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          dotsClass: 'salesHits__slide-dots',
+        }
+      }
+    ]
+  });
+
 
 });
+
