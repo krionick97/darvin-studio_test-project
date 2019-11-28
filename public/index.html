@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/reset.css"/>
     <link rel="stylesheet" href="styles/style.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"/>
     <script src="https://kit.fontawesome.com/61d2e0d67e.js"></script>
     <title>Veniam</title>
   </head>
@@ -223,10 +222,28 @@
         </div>
       </div>
     </section>
+    <section class="contact">
+      <div class="contact__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.053077850013!2d40.42312241584445!3d56.138894980658414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414c7bc86d76ab85%3A0xaf2dbb9460f0d5fe!2z0YPQuy4g0JvRg9C90LDRh9Cw0YDRgdC60L7Qs9C-LCA0Mywg0JLQu9Cw0LTQuNC80LjRgCwg0JLQu9Cw0LTQuNC80LjRgNGB0LrQsNGPINC-0LHQuy4sIDYwMDAyMA!5e0!3m2!1sru!2sru!4v1574957585364!5m2!1sru!2sru"></iframe>
+        <div class="contact__form">
+          <h3 class="contact__form-title">Связаться с нами</h3>
+          <form class="contact__form-form" action="#" name="form-contact" id="form-contact">
+            <input class="contact__form-input" type="text" name="name" placeholder="Ваше имя" id="input-name"/>
+            <input class="contact__form-input" type="tel" name="tel" placeholder="+7 (999) 999-99-99" id="input-tel"/>
+            <input class="contact__form-input" type="email" name="email" placeholder="Электронная почта" id="input-email"/>
+            <textarea class="contact__form-input" name="text" placeholder="Текст сообщения" id="input-text"></textarea>
+            <div class="contact__form-confident"><span>Согласен с <a href="#">политикой конфеденциальности</a></span>
+              <input class="contact__form-checkbox" type="checkbox" name="checkbox-contact" id="checkbox-contact"/>
+              <label class="contact__form-label" for="checkbox-contact" id="input-label"><span class="contact__form-checkmark"></span></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <div>footer</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
   </body>
 </html>

@@ -7,3 +7,20 @@ section.salesHits
     h2.salesHits__title Хиты продаж
   div.salesHits__container
     include salesHits-slider
+
+section.contact
+  div.contact__map
+    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2223.053077850013!2d40.42312241584445!3d56.138894980658414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414c7bc86d76ab85%3A0xaf2dbb9460f0d5fe!2z0YPQuy4g0JvRg9C90LDRh9Cw0YDRgdC60L7Qs9C-LCA0Mywg0JLQu9Cw0LTQuNC80LjRgCwg0JLQu9Cw0LTQuNC80LjRgNGB0LrQsNGPINC-0LHQuy4sIDYwMDAyMA!5e0!3m2!1sru!2sru!4v1574957585364!5m2!1sru!2sru")
+    div.contact__form
+      h3.contact__form-title Связаться с нами
+      form(action="#" name="form-contact")#form-contact.contact__form-form
+        input(type="text" name="name" placeholder="Ваше имя")#input-name.contact__form-input
+        input(type="tel" name="tel" placeholder="+7 (999) 999-99-99")#input-tel.contact__form-input
+        input(type="email" name="email" placeholder="Электронная почта")#input-email.contact__form-input
+        textarea(name="text" placeholder="Текст сообщения")#input-text.contact__form-input
+        div.contact__form-confident
+          span Согласен с 
+            a(href="#") политикой конфеденциальности
+          input(type="checkbox" name="checkbox-contact")#checkbox-contact.contact__form-checkbox
+          label(for="checkbox-contact")#input-label.contact__form-label
+            span.contact__form-checkmark
