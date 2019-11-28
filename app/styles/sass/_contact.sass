@@ -9,7 +9,8 @@
   &__form
     position: absolute
     top: 4.8rem
-    right: 18%
+    left: 50%
+    transform: translateX(27%)
     display: block
     width: 31.2rem
     height: 52.7rem
@@ -41,30 +42,46 @@
       resize: vertical
       height: 15.3rem
       max-height: 18rem
-      margin-bottom: 1.9rem
+      margin-bottom: 1rem
     &-confident
       display: flex
       align-items: center
       position: relative
+      margin-bottom: 2.6rem
       span
         +openSans_reg
         font-size: 1.3rem
+        display: inline-block
     &-checkbox
       position: absolute
       visibility: hidden
     &-label
       &:hover
         cursor: pointer
-    &-checkmark, &-checkmarked
+    &-checkmark
+      display: block
       margin: 0 0 0 1.2rem
       width: 1.7rem
       height: 1.7rem
       border-radius: 0.2rem
-    &-checkmark
-      display: block
       box-sizing: border-box
       background-color: $color-white
       border: 0.1rem solid $color-btn
+    &-submit
+      display: block
+      margin: 0 auto
+      width: 12.8rem
+      height: 4.5rem
+      border-radius: 0.4rem
+      background-color: $color-btn
+      color: $color-white
+      border: none
+      +openSans_reg
+      font-size: 1.5rem
+      &:focus
+        outline: none
+      &:active
+        box-shadow: inset 0.1rem 0.1rem 1rem rgba($color-black, 0.4)
 
 .contact__form-checkbox:checked + .contact__form-label > .contact__form-checkmark
   border: none
@@ -82,3 +99,50 @@
   border-width: 0 0.2rem 0.2rem 0
   transform: rotate(45deg)
 
+@media (max-width: 1070px)
+  .contact
+    &__form
+      left: 2%
+      transform: translateX(0)
+
+@media (max-width: 640px)
+  .contact
+    &__map
+      height: 35rem
+      margin-bottom: 59rem
+    &__form
+      box-shadow: none
+      border-radius: 0
+      width: 100%
+      left: 0
+      top: 35rem
+      padding: 3.6rem 0 2.7rem
+      &-input
+        display: block
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+      &-confident
+        justify-content: center
+
+@media (max-width: 350px)
+  .contact
+    &__map
+      height: 35rem
+      margin-bottom: 60rem
+    &__form
+      padding: 3.6rem 0 4rem
+      &-confident
+        max-width: 90%
+        margin-left: auto
+        margin-right: auto
+        flex-direction: row-reverse
+        align-items: flex-start
+        justify-content: flex-end
+        span
+          max-width: 14rem
+          line-height: 1.1
+      &-checkmark
+        margin: 0 1.2rem 0 0
+      &-submit
+        width: 90%
