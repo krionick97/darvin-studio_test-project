@@ -1,6 +1,7 @@
 .description
+  padding: 7.6rem 0 9.4rem
   &__types
-    padding: 7.6rem 0 3.3rem
+    padding: 0 0 3.3rem
     display: flex
     justify-content: space-between
     &-link
@@ -38,7 +39,7 @@
       border: 0.2rem solid #e4e8eb
 
   &__text
-    padding: 6.8rem 0 9.4rem
+    padding: 6.8rem 0 0
     &-container
       display: flex
       justify-content: space-between
@@ -66,13 +67,35 @@
 @media (max-width: 990px)
   .description
     &__types
-      max-width: 60%
-      margin: 0 auto
-      flex-wrap: wrap
-      justify-content: center
-      &-link
-        &:not(:first-child), &:not(:last-child),
-          margin-left: 2rem
-          margin-right: 2rem
-        &:not(:last-child)
-          margin-bottom: 2rem
+      display: none
+    &__text
+      padding: 5.8rem 0 0
+      &-container
+        flex-direction: column-reverse
+        align-items: center
+      &-block
+        max-width: 43rem
+      &-title
+        text-align: center
+      &-image
+        align-self: center
+        margin-bottom: 4rem
+
+@media (max-width: 480px)
+  .description
+    &__text
+      &-title
+        font-size: 4.5rem
+      &-container
+        max-width: 90%
+      &-image
+        width: 100%
+
+@media (max-width: 455px)
+  .description
+    padding: 6rem 0 7rem
+    &__types
+      &-border
+        display: none
+    &__text
+      padding: 0
