@@ -3,8 +3,13 @@
   padding: 6.9rem 0 3.9rem
   &__container
     display: flex
+    justify-content: space-between
   &__block
     width: 50%
+    &-second
+      display: flex
+      justify-content: space-between
+      max-width: 36rem
   &__logo
     width: 21.7rem
     margin-bottom: 3.3rem
@@ -63,5 +68,107 @@
       font-size: 1.3rem
       color: $color-text-light
       line-height: 1.4
+
+  &__title
+    +openSans_light
+    font-size: 3.5rem
+    margin-bottom: 4.8rem
+    color: $color-white
+  &__menu
+    &-item
+      +openSans_reg
+      color: $color-white
+      &:not(:last-child)
+        margin-bottom: 2rem
+      span
+        +openSans_bold
+        float: left
+        margin: 0 0.7rem 0 0
+        line-height: 0.7
+        font-size: 1.8rem
+      &:hover
+        transform: translateX(1.2rem)
+    &-link
+      font-size: 1.6rem
+      color: $color-white
+      text-decoration: none
+      &:active
+        color: red
+
+  &__mobileMenu
+    display: none
+    // width: 20rem
+
+@media (max-width: 980px)
+  .footer
+    &__container
+      max-width: 95%
+    &__menu:first-child
+      margin-left: 4rem
+    &__title
+      +openSans_reg
+      font-size: 2rem
+    &__menu
+      &-item
+        span
+          font-size: 1.6rem
+        &:hover
+          transform: translateX(0)
+
+      &-link
+        font-size: 1.4rem
+
+@media (max-width: 640px)
+  .footer
+    overflow: hidden
+    padding: 0
+    background: none
+    &__container
+      max-width: 100%
+      flex-direction: column-reverse
+    &__block
+      width: 92%
+      &-first
+        padding: 3.6rem 4%
+        background-color: $color-form
+      &-second
+        max-width: none
+        padding: 2.3rem 4% 0
+        background-color: $color-btn-2
+    &__menu
+      display: none
+    &__title
+      margin-bottom: 2.7rem
+    &__mobileMenu
+      display: block
+      width: 100%
+      &-list
+        display: block
+      &-item
+        display: block
+        padding: 1.8rem 0
+        position: relative
+        margin-bottom: 0 !important
+        &:after
+          position: absolute
+          content: ''
+          display: block
+          width: 115%
+          height: 0.1rem
+          left: -6%
+          background-color: rgba($color-border-dark, 0.5)
+        &:after
+          bottom: 0.1rem
+        &:last-child:after
+          display: none
+        &:first-child:before
+          top: 0
+          position: absolute
+          content: ''
+          display: block
+          width: 115%
+          height: 0.1rem
+          left: -6%
+          background-color: rgba($color-border-dark, 0.5)
 
 

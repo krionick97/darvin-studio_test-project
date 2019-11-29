@@ -1,0 +1,16 @@
+mixin catalogMenuItem(text)
+  li.footer__menu-item
+    span |
+    a(href="#" class="footer__menu-link")= text
+
+div.footer__menu.footer__catalog-menu
+  h3.footer__title.footer__catalog-title Каталог
+  ul.footer__menu-list
+    +catalogMenuItem('Пункт №1')
+    +catalogMenuItem('Пункт №2')
+    +catalogMenuItem('Пункт №3')
+    +catalogMenuItem('Пункт №4')
+    +catalogMenuItem('Пункт №5')
+    +catalogMenuItem('Пункт №6')
+    +catalogMenuItem('Пункт №7')
+    +catalogMenuItem('Пункт №8')

@@ -1,0 +1,16 @@
+mixin footerMenuItem(text)
+  li.footer__menu-item
+    span |
+    a(href="#" class="footer__menu-link")= text
+
+div.footer__menu
+  h3.footer__title Компания
+  ul.footer__menu-list
+    +footerMenuItem('О нас')
+    +footerMenuItem('Новости')
+    +footerMenuItem('Статьи')
+    +footerMenuItem('Фотогалерея')
+    +footerMenuItem('Продукция')
+    +footerMenuItem('Вопрос-ответ')
+    +footerMenuItem('Статьи')
+    +footerMenuItem('Контакты')
