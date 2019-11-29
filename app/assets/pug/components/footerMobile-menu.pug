@@ -1,0 +1,19 @@
+mixin mobileMenuItem(title)
+  li.footer__menu-item.footer__mobileMenu-item
+    a(href="#" class="footer__menu-link footer__mobileMenu-link")= title
+    i.arrow.mobile-arrow
+
+mixin mobileCatalogItem(title)
+  li.footer__menu-item.footer__mobileMenu-item
+    a(href="#" class="footer__menu-link footer__mobileMenu-link")= title
+    i.points
+
+ul.footer__mobileMenu-list
+  +mobileMenuItem('О компании')
+  +mobileCatalogItem('Каталог')
+  +mobileMenuItem('Доставка и оплата')
+  +mobileMenuItem('Отзывы')
+  +mobileMenuItem('Новости')
+  +mobileMenuItem('Статьи')
+  +mobileMenuItem('Фотогалерея')
+  +mobileMenuItem('Контакты')

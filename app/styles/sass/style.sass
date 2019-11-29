@@ -41,13 +41,40 @@ body
 
 .arrow
   border: solid $color-white
-  border-width: 0 1px 1px 0
+  border-width: 0 0.1rem 0.1rem 0
   display: inline-block
-  padding: 2.7px
+  padding: 0.27rem
   margin-left: 0.7rem
   margin-bottom: 0.2rem
   &-down
     transform: rotate(45deg)
+.mobile-arrow
+  padding: 0.4rem
+  margin-left: 0.2rem
+  margin-bottom: 0.5rem
+  transform: rotate(-45deg)
+.points
+  display: block
+  width: 0.4rem
+  height: 0.4rem
+  border-radius: 0.2rem
+  background-color: $color-white
+  position: relative
+  transform: translateY(0.4rem)
+  &:after, &:before
+    position: absolute
+    content: ''
+    display: block
+    width: 0.4rem
+    height: 0.4rem
+    border-radius: 0.2rem
+    background-color: inherit
+  &:before
+    top: -0.6rem
+  &:after
+    bottom: -0.5rem
+
+
 
 @import 'header'
 @import 'header-slider'

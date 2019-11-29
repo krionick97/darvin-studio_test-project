@@ -7,13 +7,9 @@ footer.footer
       include footerCatalog-menu
 
       div#footer__mobileMenu.footer__mobileMenu
-        h3.footer__title Компания
-        ul.footer__mobileMenu-list
-          // Item
-          li.footer__menu-item.footer__mobileMenu-item
-            a(href="#").footer__menu-link.footer__mobileMenu-link О компании
-
-          // Item
-          li.footer__menu-item.footer__mobileMenu-item
-            a(href="#").footer__menu-link.footer__mobileMenu-link Каталог
+        h3.footer__title.footer__mobileMenu-title Компания
+        include footerMobile-menu
+        
+        div.footer__mobileMenu-button
+          button.button.footer__mobileMenu-btn Каталог продукции
 
