@@ -21,7 +21,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-w3c-html-validator": "^1.4.4",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "browserslist": [
     "last 10 versions",
